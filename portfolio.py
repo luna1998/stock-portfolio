@@ -1,7 +1,11 @@
 class Portfolio:
+    def _init_(self):
+        self._stocks=[]
+
     def buy(self,str name,int shares,float price):
-        self.name=name
-        self.shares=shares
-        self.price=price
-    def cost():
-        return float(buy.shares * buy.price)
+        self._stocks.append((name,shares,price))
+
+    def cost(self):
+        return sum(
+            shares * price for _, shares,price in self._stocks
+        )
