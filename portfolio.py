@@ -7,6 +7,6 @@ class Portfolio:
 
     def cost(self):
         return sum(
-            shares * price for _, shares,price in self._stocks
+            shares + price for _, shares,price in self._stocks
         )
 # 这个版本可以直接在terminal call pytest
